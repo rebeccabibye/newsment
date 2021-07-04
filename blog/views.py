@@ -16,6 +16,8 @@ from rest_framework.decorators import api_view
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser 
 from rest_framework import status
+import requests
+from lxml.html import fromstring
 
 
 def is_users(post_user, logged_user):
@@ -47,7 +49,7 @@ class PostListView(LoginRequiredMixin, ListView):
         # else:
         #     data['preference'] = False
         data['preference'] = Preference.objects.all()
-        # print(Preference.objects.get(user= self.request.user))
+        #print(Preference.objects.get(user= self.request.user))
         data['all_users'] = all_users
         print(all_users, file=sys.stderr)
         return data
@@ -140,12 +142,29 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['content']
+    title = ['title']   #
     template_name = 'blog/post_new.html'
     success_url = '/'
 
     def form_valid(self, form):
+        #debugging 
+        tempvar = (str(form).split('required id="id_content">'))[1].split('</textarea></td>')[0]  #url
+        r = requests.get(tempvar)
+        tree = fromstring(r.content)
+        title = tree.findtext('.//title')
+        print(title)
+
         form.instance.author = self.request.user
-        return super().form_valid(form)
+        if "http://" in str(form).lower() or "https://" in str(form).lower():
+            if tempvar.endswith(' '):   
+                return super().form_valid(form)
+            elif " http" in tempvar:   
+                return super().form_valid(form)
+            elif ' ' not in tempvar:
+                return super().form_valid(form)
+            else:
+                return None
+
 
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
@@ -156,6 +175,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     fields = ['content']
+    title = ['title'] ##
     template_name = 'blog/post_new.html'
     success_url = '/'
 
@@ -342,7 +362,6 @@ class GroupViewSet(viewsets.ModelViewSet):
 def post_list(request):
     if request.method == 'GET':
         posts = Post.objects.all()
-        
         title = request.query_params.get('title', None)
         if title is not None:
             posts = posts.filter(title__icontains=title)
