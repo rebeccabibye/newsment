@@ -30,3 +30,7 @@ Personal task list:
 -dark and light mode? 
 
 -error when user adds extra words, not just a link
+
+-trends with hashtags?
+
+-different search options
