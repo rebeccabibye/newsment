@@ -21,31 +21,25 @@ Demo Image:
 
 7. Run app localy with: ```python manage.py runserver```.
 
-## License
-MIT License
 
-Copyright (c) 2020 Redian Marku
+Personal task list: 
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+-change Newsment logo to original one
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+-adjust time so it's am and pm, not just 24-hour intervals
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+-privacy, cookies, etc. 
 
-Please Subscribe my YouTube Channel: <a href="https://www.youtube.com/channel/UCO5WiowKFnEw17AOk008WOQ" target="_blank">Top Notch Programmer</a>.
+-awards!!
 
-# Donate
-[![paypal](https://mk0mightycausebxdggx.kinstacdn.com/wp-content/uploads/2019/06/paypal-donate-button-high-quality-png.png)](https://www.paypal.me/redidev)
-"# newsment" 
+-search comments as well
+
+-Add notifications and @s for respondng comments and mentioning
+
+-personal messagin as well? 
+
+-when linking a post, link the whole thing, while also linking the artice itself separately so users aren't confused (article link and link of post)
+
+-dark and light mode? 
+
+-error when user adds extra words, not just a link
