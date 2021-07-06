@@ -15,7 +15,7 @@ Personal task list:
 
 -adjust time so it's am and pm, not just 24-hour intervals
 
--privacy, cookies, etc. 
+-Privacy policy, Cookies, Ads info, More left to do 
 
 -awards!!
 
