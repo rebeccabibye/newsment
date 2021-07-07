@@ -33,6 +33,7 @@ Personal task list:
 
 -trends with hashtags?
 
+-reply to other comments as well by automatically doing the @ thing 
 -different search options
 
 -Help center/email/management
