@@ -33,6 +33,8 @@ Personal task list:
 
 -trends with hashtags?
 
+-leaving a page when you're not finished commenting or posting - give an error message "are you sure?" 
+
 -reply to other comments as well by automatically doing the @ thing 
 -different search options
 
