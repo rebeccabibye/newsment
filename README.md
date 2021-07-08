@@ -13,7 +13,7 @@ Personal task list:
 
 -change Newsment logo to original one
 
--adjust time so it's am and pm, not just 24-hour intervals, also compatible with each individual user's time zones
+-time compatible with each individual user's time zones (also different format since countries are different?)
 
 -Privacy policy, Cookies, Ads info, More left to do 
 
