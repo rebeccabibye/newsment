@@ -36,6 +36,9 @@ Personal task list:
 -leaving a page when you're not finished commenting or posting - give an error message "are you sure?" 
 
 -reply to other comments as well by automatically doing the @ thing 
+
 -different search options
 
 -Help center/email/management
+
+-Maybe also track which news sites had the highest ratings? most support? least bias?
