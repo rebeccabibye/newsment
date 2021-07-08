@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <h3>Notifications</h3>
+    {% if results %}
+        {% for result in results %}
+            <a
+                    style="color: rgba(255, 255, 255, 0.5) !important;"
+                    href="{% url 'post-detail' result.post_connected.id %}">
+                <p class="mb-4">
+                    {{ result.post_connected.content }}
+                </p>
+            </a>
+
+        {% endfor %}
+    {% else %}
+        <p>No notifications so far! Make a new post or write a comment to interact with the community!</p>
+    {% endif %}
+{% endblock content %}
