@@ -42,3 +42,7 @@ Personal task list:
 -Help center/email/management
 
 -Maybe also track which news sites had the highest ratings? most support? least bias?
+
+-@ sign immediately becomes blue
+
+-blocking function as well
