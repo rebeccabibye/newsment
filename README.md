@@ -46,3 +46,5 @@ Personal task list:
 -@ sign immediately becomes blue
 
 -blocking function as well
+
+-edit and delete comments
