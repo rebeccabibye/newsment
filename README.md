@@ -23,7 +23,7 @@ Personal task list:
 
 -Add notifications and @s for respondng comments and mentioning
 
--personal messagin as well? 
+-personal messagin as well, add option to their profile
 
 -when linking a post, link the whole thing, while also linking the artice itself separately so users aren't confused (article link and link of post)
 
