@@ -48,3 +48,5 @@ Personal task list:
 -blocking function as well
 
 -edit and delete comments, and say that it's been edited 
+
+-fix time for comments as well
