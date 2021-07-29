@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from blog.models import Post, Comment, Preference
+from blog.models import Post, Comment, Preference, Message
 from users.models import Follow, Profile
 import sys
 from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import Count
-from .forms import NewCommentForm
+from .forms import NewCommentForm, NewMessageForm
 from django.contrib.auth.decorators import login_required
 from .serializers import UserSerializer, GroupSerializer, PostSerializer
 from django.contrib.auth.models import User, Group
@@ -139,7 +139,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return is_users(self.get_object().author, self.request.user)
 
 
-class PostCreateView(LoginRequiredMixin, CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView): 
     model = Post
     fields = ['content']
     title = ['title']   #
@@ -354,6 +354,20 @@ def notifications(request):
         'results':results,
     }
     return render(request,'blog/notifications.html', context)
+
+class MessageListView(LoginRequiredMixin, CreateView, ListView):
+    model = Message
+    template_name = 'blog/message.html'
+    context_object_name = 'message'
+
+    def post(self, request, *args, **kwargs):
+        new_message = Message(content=request.POST.get('content'),
+                              sender=self.request.user,
+                              reciever=request.POST.get('reciever'),
+                              )
+        new_message.save()
+
+        return self.get(self, request, *args, **kwargs)
 
 
 class UserViewSet(viewsets.ModelViewSet):

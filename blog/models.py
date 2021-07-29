@@ -40,3 +40,10 @@ class Preference(models.Model):
 
     class Meta:
        unique_together = ("user", "post", "value")
+
+
+class Message(models.Model):
+    sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name="sender")
+    reciever = models.TextField(max_length=1000)
+    content = models.TextField(max_length=10000)
+    created_at = models.DateTimeField(default=timezone.now)

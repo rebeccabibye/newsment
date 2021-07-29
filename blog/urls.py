@@ -2,6 +2,7 @@ from django.urls import path
 from .views import (
     PostListView,
     PostDetailView,
+    MessageListView,
     PostCreateView,
     PostUpdateView,
     PostDeleteView,
@@ -26,6 +27,7 @@ urlpatterns = [
     path('terms/',views.terms, name='blog-terms'),
     path('privacy/',views.privacy, name='blog-privacy'),
     path('notifications/',views.notifications, name='blog-notifications'),
+    path('message/',MessageListView.as_view(), name='blog-message'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
