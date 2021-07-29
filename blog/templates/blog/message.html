@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h3>Your messages</h3>
+    <p>No messages so far!</p>
+    {% if user is not None %}
+        <div class="col-12 col-md-6 pl-0 pl-md-3 pr-3">
+            <h3 class="white-important mb-3">
+                Write a message
+            </h3>
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    {{ form | crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-outline-primary" type="submit">Send message</button>
+                </div>
+            </form>
+        </div>
+    {% endif %}
+{% endblock content %}
