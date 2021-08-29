@@ -9,6 +9,8 @@ https://github.com/redianmarku/Django-Twitter-Clone
 
 Note: currently editing/all changes at newsment-copy, django-twitter-clone is older version with a lot less changes. Most updated version (without replying comments or chatting) is in **master** branch!! Not this one
 
+Second version from https://github.com/manjurulhoque/django-social-network in **version2** branch!! Not this one
+
 PS: C:\Users\Rebecca.Bi\OneDrive - St. Agnes Academy\Desktop\temp newsment\newsment-copy>
 
 Personal task list: 
